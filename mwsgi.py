@@ -214,7 +214,7 @@ class App:
             res.headers['content-type'] = \
                 res.headers.get('content-type', 'text/plain')
             data = data.encode('utf8')
-        elif not isinstance(data, bytes):
+        elif data:
             res.headers['content-type'] = \
                 res.headers.get('content-type', 'application/json')
             data = json.dumps(data).encode('utf8')
